@@ -12,7 +12,7 @@ class UsersController < ApplicationController
       render :new
     end
     session[:user_id] = @user.id
-    redirect_to user_path(@user), notice: "Welcome #{@user.first_name}! Account successfully created"
+    redirect_to profile_path, notice: "Welcome #{@user.first_name}! Account successfully created"
   end
 
   def update
