@@ -1,0 +1,38 @@
+<h2><%= @report.month %> <%= @report.year %></h2>
+
+<%= form_for(@report, url: reports_path) do |f| %>
+
+  <div class="field">
+    <%= f.label :placements %><br />
+    <%= f.number_field :placements  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :video_showings %><br />
+    <%= f.number_field :video_showings %>
+  </div>
+
+  <div class="field">
+    <%= f.label :hours %><br />
+    <%= f.number_field :hours %>
+  </div>
+
+  <div class="field">
+    <%= f.label :return_visits %><br />
+    <%= f.number_field :return_visits %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bible_studies %><br />
+    <%= f.number_field :bible_studies %>
+  </div>
+
+  <div class="field">
+    <%= f.label :comments %><br />
+    <%= f.text_area :comments  %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Update Report" %>
+  </div>
+<% end %>
