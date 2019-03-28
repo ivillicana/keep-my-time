@@ -1,0 +1,5 @@
+<ul>
+  <% @reports.each do |report| %>
+      <li><%= link_to report_month_year(report), report_path(report) %></li>
+  <% end %>
+</ul>
