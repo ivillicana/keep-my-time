@@ -1,25 +1,25 @@
 <h2>Sign up</h2>
 
-<%= form_for(:user, url: users_path) do |f| %>
+<%= form_for(@user, url: users_path) do |f| %>
 
   <div class="field">
     <%= f.label :first_name %><br />
-    <%= f.email_field :first_name, autofocus: true, autocomplete: "given-name" %>
+    <%= f.text_field :first_name, autofocus: true, autocomplete: "given-name" %>
   </div>
 
   <div class="field">
     <%= f.label :last_name %><br />
-    <%= f.email_field :last_name, autofocus: false, autocomplete: "family-name" %>
+    <%= f.text_field :last_name, autofocus: false, autocomplete: "family-name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :telephone %><br />
+    <%= f.telephone_field :telephone, autofocus: false, autocomplete: "tel-national" %>
   </div>
 
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: false, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :telephone %><br />
-    <%= f.email_field :telephone, autofocus: false, autocomplete: "tel-national" %>
   </div>
 
   <div class="field">
