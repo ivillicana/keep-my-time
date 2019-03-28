@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   root 'application#welcome'
 
-  resources :users
+  resources :users, only: [:new, :create, :edit, :update, :destroy]
+  get 'profile', to: 'users#show', as: 'profile'
   scope :users do
     resources :reports
   end
