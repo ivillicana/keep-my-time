@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  placements: 1
+  video_showings: 1
+  hours: 1
+  return_visits: 1
+  bible_studies: 1
+  comments: MyString
+  month: MyString
+  year: 1
+  user: one
+
+two:
+  placements: 1
+  video_showings: 1
+  hours: 1
+  return_visits: 1
+  bible_studies: 1
+  comments: MyString
+  month: MyString
+  year: 1
+  user: two
