@@ -19,19 +19,19 @@ ActiveRecord::Schema.define(version: 2019_03_28_171617) do
     t.string "name"
     t.string "city"
     t.string "state"
-    t.string "country"
-    t.string "language"
+    t.string "country", default: "USA"
+    t.string "language", default: "English"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "reports", force: :cascade do |t|
-    t.integer "placements"
-    t.integer "video_showings"
-    t.integer "hours"
-    t.integer "return_visits"
-    t.integer "bible_studies"
-    t.string "comments"
+    t.integer "placements", default: 0
+    t.integer "video_showings", default: 0
+    t.integer "hours", default: 0
+    t.integer "return_visits", default: 0
+    t.integer "bible_studies", default: 0
+    t.string "comments", default: ""
     t.string "month"
     t.integer "year"
     t.bigint "user_id"
