@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  skip_before_action :redirect_if_not_logged_in, only: [:new, :create]
 
   def create
     @user = User.find_by(email: params[:user][:email].downcase)
