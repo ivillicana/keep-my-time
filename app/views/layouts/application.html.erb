@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Keep My Time" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
@@ -12,7 +12,24 @@
   </head>
 
   <body>
-  
+    <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li class="menu-text">Keep My Time</li>
+          <li><%= link_to  "New Report", new_report_path %></li>
+          <li><%= link_to  "My Reports", reports_path %></li>
+          
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+          <li><input type="search" placeholder="Search"></li>
+          <li><button type="button" class="button">Search</button></li>
+          <li><%= link_to "Profile", user_path(current_user) %></li>
+        </ul>
+      </div>
+    </div>
+
     <% flash.each do |name, msg| %>
       <% if name == "notice" %>
         <div class="alert alert-success alert-dismissible fade show">
