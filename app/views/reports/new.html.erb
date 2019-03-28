@@ -1,0 +1,50 @@
+<h2>New Field Service Report</h2>
+
+<%= form_for(:report, url: reports_path) do |f| %>
+
+  <%= f.hidden_field :user_id %>
+
+  <div class="field">
+    <%= f.label :month %><br />
+    <%= f.select :month, report_months_for_select, {:include_blank => "Select Month"}, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :year %><br />
+    <%= f.select :year, report_years_for_select, {:include_blank => "Select Year"},autofocus: false %>
+  </div>
+
+  <div class="field">
+    <%= f.label :placements %><br />
+    <%= f.number_field :placements, value: 0, within: 0..100, autofocus: false %>
+  </div>
+
+  <div class="field">
+    <%= f.label :video_showings %><br />
+    <%= f.number_field :video_showings, value: 0, within: 0..100, autofocus: false %>
+  </div>
+
+  <div class="field">
+    <%= f.label :hours %><br />
+    <%= f.number_field :hours, value: 0, within: 0..200, autofocus: false %>
+  </div>
+
+  <div class="field">
+    <%= f.label :return_visits %><br />
+    <%= f.number_field :return_visits, value: 0, within: 0..100, autofocus: false %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bible_studies %><br />
+    <%= f.number_field :bible_studies, value: 0, within: 0..30, autofocus: false %>
+  </div>
+
+  <div class="field">
+    <%= f.label :comments %><br />
+    <%= f.text_area :comments, autofocus: false %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Save Report" %>
+  </div>
+<% end %>
