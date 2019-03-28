@@ -1,3 +1,29 @@
 <h1>User Account</h1>
 
+<%= form_for(current_user, url: user_path(current_user)) do |f| %>
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, autofocus: false, autocomplete: "given-name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name, autofocus: false, autocomplete: "family-name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :telephone %><br />
+    <%= f.telephone_field :telephone, autofocus: false, autocomplete: "tel-national" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: false, autocomplete: "email" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Update Account" %>
+  </div>
+<% end %>
+
 <%= link_to "Log Out", session_path, method: :delete %>
