@@ -28,7 +28,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 
 # Foundation 6 CSS Framework
-gem 'foundation-rails'
+gem 'foundation-rails', '~> 6.5'
+gem 'autoprefixer-rails', '~> 9.5'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
