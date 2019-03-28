@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   skip_before_action :redirect_if_not_logged_in, only: [:new, :create]
-  
+
   def new
     @user = User.new
   end
@@ -13,6 +13,12 @@ class UsersController < ApplicationController
     end
     session[:user_id] = @user.id
     redirect_to user_path(@user), notice: "Welcome #{@user.first_name}! Account successfully created"
+  end
+
+  def update
+    @user = User.find(current_user.id)
+    @user.update(user_params)
+    redirect_to user_path(@user), notice: "Account successfully updated!"
   end
 
   private
