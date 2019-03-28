@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   resources :reports
   resources :users
   resources :congregations
-  resources :sessions, only: [:create, :destroy]
+  resources :sessions, only: [:new, :create]
+  delete 'sessions', to: 'sessions#destroy', as: 'session'
 end
