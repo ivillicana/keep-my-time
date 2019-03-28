@@ -6,6 +6,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :email
       t.string :telephone
       t.string :password_digest
+      t.boolean :admin, default: false
       t.references :congregation, foreign_key: true
 
       t.timestamps
