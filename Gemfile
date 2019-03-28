@@ -27,6 +27,9 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# Foundation 6 CSS Framework
+gem 'foundation-rails'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
