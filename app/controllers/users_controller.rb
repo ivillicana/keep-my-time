@@ -21,6 +21,10 @@ class UsersController < ApplicationController
     redirect_to profile_path, notice: "Account successfully updated!"
   end
 
+  def request_admin
+  
+  end
+
   private
 
   def user_params
