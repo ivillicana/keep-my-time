@@ -18,12 +18,12 @@ class UsersController < ApplicationController
   def update
     @user = User.find(current_user.id)
     @user.update(user_params)
-    redirect_to user_path(@user), notice: "Account successfully updated!"
+    redirect_to profile_path, notice: "Account successfully updated!"
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :telephone, :email, :password, :password_confirmation)
+    params.require(:user).permit(:first_name, :last_name, :telephone, :email, :password, :password_confirmation, :congregation_id)
   end
 end
