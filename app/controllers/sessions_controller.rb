@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     return redirect_to new_session_path, alert: "Unable to sign in" unless @user
 
     session[:user_id] = @user.id
-    redirect_to user_path(@user), notice: "Welcome #{@user.first_name}!"
+    redirect_to profile_path(@user), notice: "Welcome #{@user.first_name}!"
   end
 
   def destroy
