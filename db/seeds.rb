@@ -5,3 +5,38 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+congregations = [
+  {
+    name: "South Spanish",
+    city: "Newburgh",
+    state: "NY",
+    country: "USA",
+    language: "Spanish"
+  },
+  {
+    name: "North Spanish",
+    city: "Newburgh",
+    state: "NY",
+    country: "USA",
+    language: "Spanish"
+  },
+  {
+    name: "North Spanish",
+    city: "Irving",
+    state: "TX",
+    country: "USA",
+    language: "Spanish"
+  },
+  {
+    name: "Valley View",
+    city: "Farmers Branch",
+    state: "TX",
+    country: "USA",
+    language: "Spanish"
+  }
+]
+
+congregations.each do |cong|
+  Congregation.create(cong)
+end
