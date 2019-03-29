@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create, :edit, :update, :destroy]
   get 'profile', to: 'users#show', as: 'profile'
+  get 'request-admin', to: 'users#request_admin', as: 'request_admin'
   scope :users do
     resources :reports
   end
