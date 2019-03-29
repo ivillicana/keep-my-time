@@ -1,0 +1,5 @@
+<p>Select Congregation</p>
+<%= form_for(user) do |f| %>
+  <%= f.collection_select :congregation_id, Congregation.all, :id, :name_with_city_state %>
+  <%= f.submit "Assign Congregation" %>
+<% end %>
